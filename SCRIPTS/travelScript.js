@@ -17,10 +17,21 @@ const createEventParagraph = ((event, eventTitle) => {
     link.title = "Event Info";
     link.href = event.url;
     link.target = "_blank";
-    // paragraph.innerHTML = `${event.title} : `;
+
     listItems.appendChild(link);
     unOrderedList.appendChild(listItems);
+    listItems.appendChild(link);
+    unOrderedList.appendChild(listItems);
+
 });
+
+const culturePrint = (name) => {
+    const cultureSection = document.getElementById("culture");
+    let paragraph = document.createElement("p");
+    paragraph.innerHTML = name;
+    cultureSection.appendChild(paragraph);
+    
+}
 
 //This function is passed the weather fetch data and creates elements. The text elements are paragraphs
 //and an 'img' one that displays the current weather icon. 
@@ -53,19 +64,19 @@ const sectionTitle = (id) => {
     section.appendChild(sectionTitle);
 }
 
-// const fetchCulture = () => {
-//     fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,
-//     4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=40000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN
-//     &client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=30305&v=20200313`)
-//     .then(response => {
-//         //console.log(response);
-//         return response.json();
-//     })
-//     .then(data => {
-//         console.log(data);
-//     })
-//     .catch( err => console.log(err));
-// }
+const fetchCulture = () => {
+    fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=50000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN&client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=30305&v=20200313`)
+    .then(response => {
+        //console.log(response);
+        return response.json();
+    })
+    .then(data => {
+        console.log(data.response.groups[0].items);
+        data.response.groups[0].items.map(item => culturePrint(item.venue.name));
+
+    })
+    .catch( err => console.log(err));
+}
 
 
 const fetchEvent = (eventType) => {
@@ -92,8 +103,7 @@ const fetchWeather = () => {
         return response.json();
     })
     .then(data => {
-        console.log(data);
-        // console.log(data.location.name, data.location.region);
+        //console.log(data);
         createWeatherBox(data);
     })
     .catch(err => console.log(err));
@@ -106,14 +116,14 @@ userSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     fetchWeather();
     if (userLocation.value !== "") {
-        //fetchCulture();
-        console.log('clicked');
-        fetchEvent("music");
+        fetchCulture();
+        //console.log('clicked');
+        //fetchEvent("music");
         //fetchEvent("concerts");
-        fetchEvent("film");
+        //fetchEvent("film");
         //fetchEvent("attractions")
-        fetchEvent("sports");
-        fetchEvent("comedy");
+        //fetchEvent("sports");
+        //fetchEvent("comedy");
         //fetchEvent("atttractions");
 
     } else {
