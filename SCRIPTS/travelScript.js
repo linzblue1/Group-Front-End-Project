@@ -91,7 +91,7 @@ const fetchEvent = (eventType) => {
       })
     .then(data => {
         console.log(data);
-        sectionTitle(eventType);
+        //sectionTitle(eventType);
         data.events.event.map(item => createEventParagraph(item, `${eventType}`));
       })
       .catch(err => console.error(err));
@@ -116,15 +116,14 @@ userSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     fetchWeather();
     if (userLocation.value !== "") {
-        fetchCulture();
+        //fetchCulture();
         //console.log('clicked');
         fetchEvent("music");
         //fetchEvent("concerts");
-        //fetchEvent("film");
+        fetchEvent("film");
         //fetchEvent("attractions")
-        //fetchEvent("sports");
-        //fetchEvent("comedy");
-        //fetchEvent("atttractions");
+        fetchEvent("sports");
+        fetchEvent("comedy");
 
     } else {
         alert("enter a location");
