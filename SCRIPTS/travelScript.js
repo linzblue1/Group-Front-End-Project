@@ -9,8 +9,8 @@ const userSubmit = document.getElementById("userSubmit");
 //It then also creates an 'a' element and assigns the url of the event to the href.
 //then the link is appended to the paragraph and the paragraph is appended to the body.
 const createEventParagraph = ((event, eventTitle) => {
-    const section = document.getElementById(eventTitle);
-    let paragraph = document.createElement("p");
+    const unOrderedList = document.getElementById(eventTitle);
+    let listItems = document.createElement("li");
     let link = document.createElement("a");
     const linkText = document.createTextNode(`${event.title}`);
     link.appendChild(linkText);
@@ -18,8 +18,8 @@ const createEventParagraph = ((event, eventTitle) => {
     link.href = event.url;
     link.target = "_blank";
     // paragraph.innerHTML = `${event.title} : `;
-    paragraph.appendChild(link);
-    section.appendChild(paragraph);
+    listItems.appendChild(link);
+    unOrderedList.appendChild(listItems);
 });
 
 //This function is passed the weather fetch data and creates elements. The text elements are paragraphs
