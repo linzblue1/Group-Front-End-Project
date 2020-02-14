@@ -16,7 +16,9 @@
   transform: translate(-50%, -50%);
   opacity: .8;
 } */
-
+li {
+  list-style-type: none;
+}
 /* .userSubmitClass {
   position: relative;
   top: 50%;
