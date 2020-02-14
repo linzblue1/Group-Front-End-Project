@@ -9,7 +9,7 @@ const userSubmit = document.getElementById("userSubmit");
 //It then also creates an 'a' element and assigns the url of the event to the href.
 //then the link is appended to the paragraph and the paragraph is appended to the body.
 const createEventParagraph = ((event, eventTitle) => {
-    const unOrderedList = document.getElementById(eventTitle);
+    const unOrderedList = document.getElementById(`${eventTitle}List`);
     let listItems = document.createElement("li");
     let link = document.createElement("a");
     const linkText = document.createTextNode(`${event.title}`);
@@ -118,7 +118,7 @@ userSubmit.addEventListener("click", (e) => {
     if (userLocation.value !== "") {
         fetchCulture();
         //console.log('clicked');
-        //fetchEvent("music");
+        fetchEvent("music");
         //fetchEvent("concerts");
         //fetchEvent("film");
         //fetchEvent("attractions")
@@ -131,5 +131,4 @@ userSubmit.addEventListener("click", (e) => {
     }
 
 })
-
 
