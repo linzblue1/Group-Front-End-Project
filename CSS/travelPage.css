@@ -16,7 +16,20 @@
   transform: translate(-50%, -50%);
   opacity: .8;
 } */
-
+li {
+  list-style-type: none;
+}
+.dropDownMenuTitle {
+  display: flex;
+  color: white;
+  font-size: 2rem;
+}
+/* .dropdownContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+} */
 /* .userSubmitClass {
   position: relative;
   top: 50%;
