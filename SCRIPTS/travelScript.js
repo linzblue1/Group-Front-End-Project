@@ -65,7 +65,7 @@ const sectionTitle = (id) => {
 }
 
 const fetchCulture = () => {
-    fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=50000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN&client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=30305&v=20200313`)
+    fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=50000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN&client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=${userLocation.value}&v=20200313`)
     .then(response => {
         //console.log(response);
         return response.json();
