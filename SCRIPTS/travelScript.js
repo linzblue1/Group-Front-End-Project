@@ -26,10 +26,11 @@ const createEventParagraph = ((event, eventTitle) => {
 });
 
 const culturePrint = (name) => {
-    const cultureSection = document.getElementById("culture");
-    let paragraph = document.createElement("p");
-    paragraph.innerHTML = name;
-    cultureSection.appendChild(paragraph);
+    //console.log(name);
+    const cultureSection = document.getElementById("cultureList");
+    let cultureListItem = document.createElement("li");
+    cultureListItem.innerHTML = name;
+    cultureSection.appendChild(cultureListItem);
     
 }
 
@@ -59,7 +60,6 @@ const createWeatherBox = (data) => {
 const sectionTitle = (id) => {
     const section = document.getElementById(id);
     const sectionTitle = document.createElement("h1");
-    console.log(id);
     sectionTitle.innerHTML = id.toUpperCase();
     section.appendChild(sectionTitle);
 }
@@ -71,7 +71,7 @@ const fetchCulture = () => {
         return response.json();
     })
     .then(data => {
-        console.log(data.response.groups[0].items);
+        //console.log(data.response.groups[0].items); //see what the other array items offer?
         data.response.groups[0].items.map(item => culturePrint(item.venue.name));
 
     })
@@ -86,11 +86,11 @@ const fetchEvent = (eventType) => {
     fetch(`https://api.eventful.com/json/events/search?q=${eventType}&c=${eventType}&t=today&l=
     ${userLocation.value}&within=25&sort_direction=descending&sort_order=popularity&page_size=20&app_key=QfJVpR8FLcNsHKLG`)
     .then(response => {
-          console.log(response);
+          //console.log(response);
           return response.json();
       })
     .then(data => {
-        console.log(data);
+        //console.log(data);
         //sectionTitle(eventType);
         data.events.event.map(item => createEventParagraph(item, `${eventType}`));
       })
@@ -116,7 +116,7 @@ userSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     fetchWeather();
     if (userLocation.value !== "") {
-        //fetchCulture();
+        fetchCulture();
         //console.log('clicked');
         fetchEvent("music");
         //fetchEvent("concerts");
