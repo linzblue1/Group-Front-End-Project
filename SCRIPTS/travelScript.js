@@ -1,13 +1,13 @@
 
-"use strict"
+"use strict"//; import "isomorphic-fetch";
 
 const userLocation = document.getElementById("userLocation");
 
 const userSubmit = document.getElementById("userSubmit");
 
-//This function creates a 'p' element and then appends the text of the event title.
+//This function creates a 'li' element and then appends the text of the event title.
 //It then also creates an 'a' element and assigns the url of the event to the href.
-//then the link is appended to the paragraph and the paragraph is appended to the body.
+//then the link is appended to the list and the list is appended to the section it belongs.
 const createEventParagraph = ((event, eventTitle) => {
     const unOrderedList = document.getElementById(`${eventTitle}List`);
     let listItems = document.createElement("li");
@@ -26,7 +26,6 @@ const createEventParagraph = ((event, eventTitle) => {
 });
 
 const culturePrint = (name) => {
-    //console.log(name);
     const cultureSection = document.getElementById("cultureList");
     let cultureListItem = document.createElement("li");
     cultureListItem.innerHTML = name;
@@ -56,7 +55,7 @@ const createWeatherBox = (data) => {
     
 }
 
-//This function creates a title over the section. 
+//This function creates a title over the section. perhaps defunct now but i'm leaving it in just in case...
 const sectionTitle = (id) => {
     const section = document.getElementById(id);
     const sectionTitle = document.createElement("h1");
@@ -64,16 +63,45 @@ const sectionTitle = (id) => {
     section.appendChild(sectionTitle);
 }
 
+//fetching wiki data for the culture tab. taking the data and creating links for the drop down items.
+//This could use some refactoring but it works for now...
+const fetchCultureLink = (culturalPlace) => {
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&titles=${culturalPlace}&prop=info&inprop=url|talkid`)
+    .then(response => response.json())
+    .then(data => {
+        let firstEntry = () => {
+            for (var a in data.query.pages) return a;
+        }
+
+        let zero = firstEntry();
+        const cultureSection = document.getElementById("cultureList");
+        let cultureListItem = document.createElement("li");
+        let cultureLink = document.createElement("a");
+        const cultureLinkText = document.createTextNode(`${culturalPlace}`);
+        cultureLink.appendChild(cultureLinkText);
+        cultureLink.href = data.query.pages[`${zero}`].fullurl;
+        cultureLink.target = "_blank";
+        cultureListItem.appendChild(cultureLink);
+        cultureSection.appendChild(cultureListItem);
+
+    })
+}
+
+//this function creates a list of cultural items based on the categories selected ( we could add more or less).
+//It calls the fetchCultureLink which prints the items and their wiki links into the culture dropdown menu.
+
 const fetchCulture = () => {
-    fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=50000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN&client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=${userLocation.value}&v=20200313`)
+    fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,4bf58dd8d48988d165941735,4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=50000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN&client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=${userLocation.value}&v=20200313`)
     .then(response => {
-        //console.log(response);
         return response.json();
     })
     .then(data => {
-        //console.log(data.response.groups[0].items); //see what the other array items offer?
-        data.response.groups[0].items.map(item => culturePrint(item.venue.name));
+        let linkArray = []
+        data.response.groups[0].items.map(item => {
+        fetchCultureLink(`${item.venue.name}`);
 
+        })
+        
     })
     .catch( err => console.log(err));
 }
@@ -86,12 +114,9 @@ const fetchEvent = (eventType) => {
     fetch(`https://api.eventful.com/json/events/search?q=${eventType}&c=${eventType}&t=today&l=
     ${userLocation.value}&within=25&sort_direction=descending&sort_order=popularity&page_size=20&app_key=QfJVpR8FLcNsHKLG`)
     .then(response => {
-          //console.log(response);
           return response.json();
       })
     .then(data => {
-        //console.log(data);
-        //sectionTitle(eventType);
         data.events.event.map(item => createEventParagraph(item, `${eventType}`));
       })
       .catch(err => console.error(err));
@@ -103,7 +128,6 @@ const fetchWeather = () => {
         return response.json();
     })
     .then(data => {
-        //console.log(data);
         createWeatherBox(data);
     })
     .catch(err => console.log(err));
@@ -117,11 +141,8 @@ userSubmit.addEventListener("click", (e) => {
     fetchWeather();
     if (userLocation.value !== "") {
         fetchCulture();
-        //console.log('clicked');
         fetchEvent("music");
-        //fetchEvent("concerts");
         fetchEvent("film");
-        //fetchEvent("attractions")
         fetchEvent("sports");
         fetchEvent("comedy");
 
