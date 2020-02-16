@@ -118,6 +118,7 @@ img {
 .siteName {
   font-family: "Montserrat";
   align-self: baseline;
+  font-weight: 900;
   padding-left: 250px;
   font-size: 5rem;
   color: white;
