@@ -154,8 +154,9 @@ body {
   .siteName {
     font-family: "Montserrat";
     align-self: center;
+    padding-left: 0px;
     font-size: 4rem;
-    color: #98CEAC;
+    color: white;
   }
 }
 
