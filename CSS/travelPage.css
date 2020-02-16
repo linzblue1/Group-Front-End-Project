@@ -1,49 +1,114 @@
+html {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
 
-.backgroundImg {
+
+
+/* .backgroundImg {
     background: url(../IMG/mountain-984083.jpg);
     height: 100vh;
     background-size: 100% 100%;
     background-position: center;
-    /* background-repeat: no-repeat; */
-  
+    background-repeat: no-repeat;
   }
-  /* .userLocationClass {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  */
+  .userLocationClass {
+  display: flex;
+  margin: 5px;
+  border-radius: 2px;
+  width: 220px;
   opacity: .8;
-} */
+}
+
+a {
+  color: black;
+  font-size: 1rem;
+}
+a:hover {
+  color: #00cefe;
+}
+
 li {
   list-style-type: none;
 }
+
+form {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.imgContainer {
+  display: flex;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  margin: 60px auto;
+  background: url(../IMG/mountain-984083.jpg);
+  height: 70vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.accordian-item {
+  color: white;
+  text-decoration: none;
+}
+
 .dropDownMenuTitle {
   display: flex;
-  color: white;
-  font-size: 2rem;
+  flex-direction: inherit;
+  color: black;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
 }
-/* .dropdownContainer {
+.dropdownContainer {
   display: flex;
   flex-direction: row;
+  width: auto;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-} */
-/* .userSubmitClass {
-  position: relative;
-  top: 50%;
-  left: 46.8%;
-} */
-.container {
-    /* display: flex; */
-    position: absolute;
-    width: 100%;
-    height: auto;
-    /* justify-content: center; */
-  }
+}
+.weatherBox {
+  display: flex;
+  flex-direction: inherit;
+  align-self: center;
+  font-family: 'Montserrat';
+  width: auto;
+  height: auto;
+}
 
-  /* section {
-      display: flex;
+select {
+  -webkit-appearance: none;
+}
 
-  } */
+.button {
+  display: flex;
+  border-radius: 2px;
+  align-self: baseline;
+  height: 39px;
+  background-color: #00cefe;
+  font-family: 'Montserrat';
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+body {
+  margin-bottom: 200px;
+  height: auto;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #edfff6), color-stop(0.87, #b2e4f3));
+}
