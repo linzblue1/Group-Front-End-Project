@@ -61,6 +61,7 @@ form{
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: .9;
 
 }
 img {
@@ -129,4 +130,8 @@ body {
   margin-bottom: 200px;
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #edfff6), color-stop(0.87, #b2e4f3));
+}
+
+#hidden {
+  display: none;
 }
