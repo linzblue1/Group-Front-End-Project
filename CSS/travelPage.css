@@ -61,6 +61,7 @@ form{
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: .9;
 
 }
 img {
@@ -142,4 +143,8 @@ body {
     width: 220px;
     opacity: .8;
   }
+}
+
+#hidden {
+  display: none;
 }

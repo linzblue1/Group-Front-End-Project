@@ -5,6 +5,8 @@ const userLocation = document.getElementById("userLocation");
 
 const userSubmit = document.getElementById("userSubmit");
 
+
+
 //This function creates a 'li' element and then appends the text of the event title.
 //It then also creates an 'a' element and assigns the url of the event to the href.
 //then the link is appended to the list and the list is appended to the section it belongs.
@@ -41,6 +43,7 @@ const createWeatherBox = (data) => {
     const weatherBox = document.createElement("div");
     const locationParagraph = document.createElement("p")
     const weatherImage = document.createElement("img");
+    weatherBox.setAttribute("class", "weatherBoxClass")
     weatherImage.src = `https:${data.current.condition.icon}`;
     locationParagraph.innerHTML = location;
     weatherBox.appendChild(weatherImage);
@@ -152,3 +155,12 @@ userSubmit.addEventListener("click", (e) => {
 
 })
 
+// Jquery to kept events hidden till search button is clicked
+$("#userSubmit").one("click", function() {
+    $("#hidden").toggle();
+});
+
+// Jquery to replace the Weatherbox w/ the new search option
+$("#userSubmit").click(function (){
+    $("div.weatherBoxClass").replaceWith();
+});
