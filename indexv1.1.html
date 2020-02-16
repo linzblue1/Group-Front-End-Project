@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel</title>
-    <link rel="stylesheet" href="CSS/travelPage.css" />
+    
 
     <link
       rel="stylesheet"
@@ -13,69 +13,69 @@
       integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg=="
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/travelPage.css" />
   </head>
   <body class="backgroundImg">
     <div class="container">
-      <div class="grid-x">
-        <!-- <img class="background" src="images/mountain-984083.jpg"> -->
+      <div class="imgContainer">
+        <form>
+          <input
+            type="text"
+            id="userLocation"
+            class="userLocationClass"
+            placeholder="Enter a ZIP code"
+          />
+          <button
+            type="submit"
+            id="userSubmit"
+            class="button"
+            class="userSubmitClass"
+          >
+            Click to Submit
+          </button>
+        </form>
       </div>
       <div class="grid-x grid-padding-x align-center-middle text-center">
-        <div class="cell small-4">
-          <form>
-            <input
-              type="text"
-              id="userLocation"
-              class="userLocationClass"
-              placeholder="Enter a ZIP code"
-            />
-            <button
-              type="submit"
-              id="userSubmit"
-              class="button"
-              class="userSubmitClass"
-            >
-              Click to Submit
-            </button>
-          </form>
-          
-          <section class="" id="weather"></section>
-        <section class="dropdownContainer" id="dropdownContainer">
-        <ul class="vertical menu accordion-menu" data-accordion-menu>
-          <li>
-            <a href="#" id="music" class="dropDownMenuTitle">Music</a>
-            <ul class="menu vertical nested" id="musicList">
+        <div class="results">
+          <section class="weatherBox" id="weather"></section>
+          <section class="dropdownContainer" id="dropdownContainer">
+          <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+              <a href="#" id="music" class="dropDownMenuTitle">Music</a>
+              <ul class="menu vertical nested" id="musicList">
+              </ul>
             </ul>
           </ul>
-        </ul>
-        <ul class="vertical menu accordion-menu" data-accordion-menu>
-          <li>
-            <a href="#" id="comedy" class="dropDownMenuTitle">Comedy</a>
-            <ul class="menu vertical nested" id="comedyList">
+          <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+              <a href="#" id="comedy" class="dropDownMenuTitle">Comedy</a>
+              <ul class="menu vertical nested" id="comedyList">
+              </ul>
             </ul>
           </ul>
-        </ul>
-        <ul class="vertical menu accordion-menu" data-accordion-menu>
-          <li>
-            <a href="#" id="sports" class="dropDownMenuTitle">Sports</a>
-            <ul class="menu vertical nested" id="sportsList">
+          <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+              <a href="#" id="sports" class="dropDownMenuTitle">Sports</a>
+              <ul class="menu vertical nested" id="sportsList">
+              </ul>
             </ul>
           </ul>
-        </ul>
-        <ul class="vertical menu accordion-menu" data-accordion-menu>
-          <li>
-            <a href="#" id="film" class="dropDownMenuTitle">Film</a>
-            <ul class="menu vertical nested" id="filmList">
+          <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+              <a href="#" id="film" class="dropDownMenuTitle">Film</a>
+              <ul class="menu vertical nested" id="filmList">
+              </ul>
             </ul>
           </ul>
-        </ul>
-        <ul class="vertical menu accordion-menu" data-accordion-menu>
-          <li>
-            <a href="#" id="culture" class="dropDownMenuTitle">Culture</a>
-            <ul class="menu vertical nested" id="cultureList">
+          <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+              <a href="#" id="culture" class="dropDownMenuTitle">Culture</a>
+              <ul class="menu vertical nested" id="cultureList">
+              </ul>
             </ul>
           </ul>
-        </ul>
-      </section>
+        </section>
             
                 <!-- <a href="#"><li class="" id="sports"></a></li>
                 <a href="#"><li class="" id="comedy"></a></li>
