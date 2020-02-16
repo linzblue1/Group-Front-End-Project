@@ -51,7 +51,7 @@ form{
 .imgContainer {
   display: flex;
   border-radius: 5px;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 70%;
   margin: 60px auto;
@@ -115,6 +115,14 @@ img {
   /* background-color: #b2e4f3; */
   font-family: 'Montserrat';
 }
+.siteName {
+  font-family: "Montserrat";
+  align-self: baseline;
+  padding-left: 250px;
+  font-size: 5rem;
+  color: white;
+
+}
 ::placeholder {
   font-family: 'Montserrat';
 }
@@ -140,8 +148,14 @@ body {
     display: flex;
     margin: 5px;
     border-radius: 2px;
-    width: 220px;
+    width: 200px;
     opacity: .8;
+  }
+  .siteName {
+    font-family: "Montserrat";
+    align-self: center;
+    font-size: 4rem;
+    color: #98CEAC;
   }
 }
 
