@@ -6,7 +6,7 @@ html {
   display: flex;
   margin: 5px;
   border-radius: 2px;
-  width: 220px;
+  width: 520px;
   opacity: .8;
 }
 
@@ -110,11 +110,13 @@ img {
   border-radius: 2px;
   align-self: baseline;
   height: 39px;
-  background-color: #00cefe;
+  background-color: #98CEAC;
   /* background-color: #b2e4f3; */
   font-family: 'Montserrat';
 }
-
+::placeholder {
+  font-family: 'Montserrat';
+}
 .results {
   display: flex;
   width: 70%;
@@ -128,5 +130,16 @@ img {
 body {
   margin-bottom: 200px;
   height: auto;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #edfff6), color-stop(0.87, #b2e4f3));
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #edfff6), color-stop(0.87, #b2e4f3)); */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #DAE2F8), color-stop(0.87, #D6A4A4));
+
+}
+@media only screen and (max-width: 600px) {
+  .userLocationClass {
+    display: flex;
+    margin: 5px;
+    border-radius: 2px;
+    width: 220px;
+    opacity: .8;
+  }
 }
