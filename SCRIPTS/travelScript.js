@@ -15,6 +15,7 @@ const createEventParagraph = ((event, eventTitle) => {
     let listItems = document.createElement("li");
     let link = document.createElement("a");
     const linkText = document.createTextNode(`${event.title}`);
+    listItems.setAttribute("class", "listItemClass")
     link.appendChild(linkText);
     link.title = "Event Info";
     link.href = event.url;
@@ -43,7 +44,7 @@ const createWeatherBox = (data) => {
     const weatherBox = document.createElement("div");
     const locationParagraph = document.createElement("p")
     const weatherImage = document.createElement("img");
-    weatherBox.setAttribute("class", "weatherBoxClass")
+    weatherBox.setAttribute("class", "weatherBoxClass");
     weatherImage.src = `https:${data.current.condition.icon}`;
     locationParagraph.innerHTML = location;
     weatherBox.appendChild(weatherImage);
@@ -80,6 +81,7 @@ const fetchCultureLink = (culturalPlace) => {
         const cultureSection = document.getElementById("cultureList");
         let cultureListItem = document.createElement("li");
         let cultureLink = document.createElement("a");
+        cultureListItem.setAttribute("class", "cultureItemClass")
         const cultureLinkText = document.createTextNode(`${culturalPlace}`);
         cultureLink.appendChild(cultureLinkText);
         cultureLink.href = data.query.pages[`${zero}`].fullurl;
@@ -160,7 +162,16 @@ $("#userSubmit").one("click", function() {
     $("#hidden").toggle();
 });
 
-// Jquery to replace the Weatherbox w/ the new search option
+// Jquery to replace the Weatherbox..etc w/ the new search option
 $("#userSubmit").click(function (){
     $("div.weatherBoxClass").replaceWith();
 });
+
+$("#userSubmit").click(function (){
+    $("li.listItemClass").replaceWith();
+});
+
+$("#userSubmit").click(function (){
+    $("li.cultureItemClass").replaceWith();
+});
+
