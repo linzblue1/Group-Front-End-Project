@@ -28,7 +28,7 @@ a:hover {
 
 span {
   font-size: 3.5rem;
-  color: #98CEAC;
+  color: #f46A4E;
 }
 
 select {
@@ -138,9 +138,10 @@ img {
   border-radius: 2px;
   align-self: baseline;
   height: 39px;
-  background-color: #98CEAC;
+  background-color: #f06553;
   /* background-color: #b2e4f3; */
   font-family: 'Montserrat';
+  opacity: 0.85;
 }
 
 .siteName {
@@ -150,6 +151,7 @@ img {
   padding-left: 250px;
   font-size: 5rem;
   color: white;
+  opacity: 0.85;
 
 }
 

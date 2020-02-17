@@ -195,3 +195,28 @@ $('.mainDropdownTitle').on('click', e => {
     }
 });
 
+$('#userSubmit').on('click', function(event) {
+
+    var target = $('.mainDropdownTitle');
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
+
+});
+
+$('.mainDropdownTitle').on('click', function(event) {
+
+    var target = $('#music');
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
+
+});
