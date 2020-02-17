@@ -185,3 +185,14 @@ $('#userSubmit').on('click', e => {
         }, 1500);
     }
 });
+
+$('.mainDropdownTitle').on('click', e => {
+    let target = $("#music");
+    if( target.length ) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
+});
+
