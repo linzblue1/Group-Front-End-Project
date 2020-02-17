@@ -173,5 +173,15 @@ $("#userSubmit").click(function (){
 
 $("#userSubmit").click(function (){
     $("li.cultureItemClass").replaceWith();
+    
 });
 
+$('#userSubmit').on('click', e => {
+    let target = $(".mainDropdownTitle");
+    if( target.length ) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
+});
