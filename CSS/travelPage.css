@@ -67,7 +67,7 @@ form{
   flex-direction: column;
   justify-content: center;
   width: 70%;
-  margin: 60px auto;
+  margin: 60px auto 10px auto;
   /* background: url(../IMG/cityShot.jpg); */
   background: url(../IMG/cityShot2.jpg);
   height: 80vh;
@@ -103,12 +103,12 @@ img {
 }
 .dropdownContainer {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   width: 70%;
-  /* align-items: flex-start; */
+  overflow: visible;
   flex-wrap: wrap;
   margin: auto;
-  /* justify-content: space-between; */
+  justify-content: space-evenly;
 }
 .weatherBox {
   display: flex;
@@ -121,7 +121,7 @@ img {
   font-family: 'Montserrat';
   width: 50%;
   height: auto;
-  /* margin: 0px auto 0px auto; */
+  margin: auto;
 
 }
 .button {
@@ -147,8 +147,14 @@ img {
 }
 .results {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: hsla(240, 100%, 20%, 0.09);
+  align-items: center;
+  border-radius: 5px;
   width: 50%;
-  height: auto;
+  height: fit-content;
+  margin: 10px auto 10px auto;
 
 }
 body {
@@ -158,6 +164,12 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #DAE2F8), color-stop(0.87, #D6A4A4));
 
 }
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
   .userLocationClass {
     display: flex;
@@ -191,10 +203,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 70%;
-    /* align-items: flex-start; */
+    align-items: center;
     flex-wrap: wrap;
     margin: auto;
     /* justify-content: space-between; */
+  }
+  .results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: hsla(240, 100%, 20%, 0.09);
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: fit-content;
+    margin: 10px auto;
+  
   }
 }
 .weatherBoxClass {
@@ -206,6 +230,7 @@ body {
   display: none;
 }
 
+
 a:after {
   content: none!important;
 };
@@ -216,6 +241,18 @@ a:after {
     border-radius: 2px;
     width: 200px;
     opacity: .8;
+  }
+  .results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: hsla(240, 100%, 20%, 0.09);
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: fit-content;
+    margin: 10px auto;
+  
   }
   .weatherBox {
     display: flex;
@@ -240,7 +277,7 @@ a:after {
     display: flex;
     flex-direction: column;
     width: 70%;
-    /* align-items: flex-start; */
+    align-items: center;
     flex-wrap: wrap;
     margin: auto;
     /* justify-content: space-between; */
