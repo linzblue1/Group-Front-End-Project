@@ -101,7 +101,6 @@ const fetchCulture = () => {
         return response.json();
     })
     .then(data => {
-        let linkArray = []
         data.response.groups[0].items.map(item => {
         fetchCultureLink(`${item.venue.name}`);
 
@@ -185,7 +184,7 @@ $('#userSubmit').on('click', e => {
         }, 1500);
     }
 });
-
+//creates a scolling animation frmo the results to the first item.
 $('.mainDropdownTitle').on('click', e => {
     let target = $("#music");
     if( target.length ) {
