@@ -39,11 +39,48 @@
         </form>
       </div>
     </div>
-    <section class="weatherBox" id="weather"></section>
-    <div class="results">
-    <div id="hidden">
-        <section class="dropdownContainer" id="dropdownContainer">
-          <ul class="vertical menu accordion-menu" data-accordion-menu>
+    <!-- <section class="weatherBox" id="weather"></section> -->
+    <div id="hidden" >
+      <div class="dropdownContainer">
+        <section class="weatherBox" id="weather"></section>
+        <section class="results" id="dropdownContainer">
+          
+          <ul class="vertical menu dropDownMenuTitle" data-accordion-menu style="max-width: 250px">
+            <li>
+              <a href="#" class="mainDropdownTitle">What's going on...</a>
+              <ul class="menu vertical nested">
+                <li>
+                  <a href="#" id="music" class="dropDownMenuTitle">Music</a>
+                  <ul class="menu vertical nested" id="musicList">
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" id="comedy" class="dropDownMenuTitle">Comedy</a>
+                  <ul class="menu vertical nested" id="comedyList">
+                  
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" id="sports" class="dropDownMenuTitle">Sports</a>
+                  <ul class="menu vertical nested" id="sportsList">
+                    
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"id="film" class="dropDownMenuTitle">Film</a>
+                  <ul class="menu vertical nested" id="filmList">
+                    
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" id="culture" class="dropDownMenuTitle">Culture</a>
+                  <ul class="menu vertical nested" id="cultureList">
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- <ul class="vertical menu accordion-menu" data-accordion-menu>
             <li>
               <a href="#" id="music" class="dropDownMenuTitle">Music</a>
               <ul class="menu vertical nested" id="musicList">
@@ -77,10 +114,10 @@
               <ul class="menu vertical nested" id="cultureList">
               </ul>
             </ul>
-          </ul>
+          </ul> -->
         </section>
       </div>
-    </div>
+      </div>
   <script src="SCRIPTS/app.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
