@@ -21,6 +21,10 @@ a {
   font-size: 1rem;
   font-family: "Montserrat";
 }
+.menu.nested {
+  margin-right: 0;
+  margin-left: 0rem;
+}
 
 a:hover {
   color: #f46A4E;
