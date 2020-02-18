@@ -198,6 +198,9 @@ body {
     font-size: 4rem;
     color: white;
   }
+  body {
+    margin-bottom: 300px;
+  }
 
 
 }
