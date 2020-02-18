@@ -190,7 +190,17 @@ body {
 
 }
 
+@media only screen and (min-width: 1650px) {
+  .siteName {
+    font-family: "Montserrat";
+    align-self: center;
+    padding-left: 0px;
+    font-size: 4rem;
+    color: white;
+  }
 
+
+}
 
 
 
