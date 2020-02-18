@@ -5,6 +5,8 @@ const userLocation = document.getElementById("userLocation");
 
 const userSubmit = document.getElementById("userSubmit");
 
+const aboutUsLink = document.getElementById("aboutUsLink");
+
 
 
 //This function creates a 'li' element and then appends the text of the event title.
@@ -155,6 +157,11 @@ userSubmit.addEventListener("click", (e) => {
     }
 
 })
+//opens the about me page in a new window.
+aboutUsLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.open("https://www.lpiv.co");
+});
 
 // Jquery to kept events hidden till search button is clicked
 $("#userSubmit").one("click", function() {
