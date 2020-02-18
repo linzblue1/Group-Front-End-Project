@@ -101,7 +101,6 @@ const fetchCulture = () => {
         return response.json();
     })
     .then(data => {
-        let linkArray = []
         data.response.groups[0].items.map(item => {
         fetchCultureLink(`${item.venue.name}`);
 
@@ -173,6 +172,27 @@ $("#userSubmit").click(function (){
 
 $("#userSubmit").click(function (){
     $("li.cultureItemClass").replaceWith();
+    
+});
+
+$('#userSubmit').on('click', e => {
+    let target = $(".mainDropdownTitle");
+    if( target.length ) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
+});
+//creates a scolling animation frmo the results to the first item.
+$('.mainDropdownTitle').on('click', e => {
+    let target = $("#music");
+    if( target.length ) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
 });
 
 $('#userSubmit').on('click', function(event) {

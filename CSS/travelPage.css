@@ -11,6 +11,7 @@ html {
   width: 520px;
   opacity: .8;
 }
+
 .mainDropdownTitle {
   font-size: 3rem;
 }
@@ -20,24 +21,36 @@ a {
   font-size: 1rem;
   font-family: "Montserrat";
 }
+
 a:hover {
-  color: #98CEAC;
+  color: #f46A4E;
 }
+a:focus {
+  color: #f46A4E
+}
+
 span {
   font-size: 3.5rem;
   color: #f46A4E;
-  
-
 }
+
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
+
 select::-ms-expand {
   display: none;
   appearance: none;
   overflow: hidden;
+}
+
+.button:hover {
+  background-color: #f46A4E;
+}
+.button:focus {
+  background-color: #f46A4E
 }
 
 
@@ -45,13 +58,15 @@ li {
   list-style-type: none;
   position: relative;
 }
+
 .formContainer {
   display: flex;
   padding: 1px;
   flex-basis: auto;
   align-content: center;
 }
-form{
+
+form {
   display: flex;
   align-self: center;
   padding: 5px;
@@ -69,15 +84,14 @@ form{
   justify-content: center;
   width: 70%;
   margin: 60px auto 10px auto;
-  /* background: url(../IMG/cityShot.jpg); */
   background: url(../IMG/cityShot2.jpg);
   height: 80vh;
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
   opacity: .9;
-
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -88,19 +102,22 @@ img {
   color: white;
   text-decoration: none;
 }
-/* ul {
-  position: absolute;
-  z-index: 1000;
-} */
+
 .dropDownMenuTitle {
   display: flex;
   flex-direction: column;
   /* position: absolute; */
   justify-items: center;
   color: black;
-  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', Verdana,Tahoma, sans-serif;
   padding: 13px;
   font-size: 3rem;
+}
+.aboutMeLink {
+  align-self: flex-end;
+  color: white;
+  font-size: 1.4rem;
+  margin: 0px auto;
 }
 .dropdownContainer {
   display: flex;
@@ -111,6 +128,7 @@ img {
   margin: auto;
   justify-content: space-evenly;
 }
+
 .weatherBox {
   display: flex;
   text-align: center;
@@ -125,6 +143,7 @@ img {
   margin: auto;
 
 }
+
 .button {
   display: flex;
   border-radius: 2px;
@@ -135,6 +154,7 @@ img {
   font-family: 'Montserrat';
   opacity: 0.85;
 }
+
 .siteName {
   font-family: "Montserrat";
   align-self: baseline;
@@ -145,9 +165,11 @@ img {
   opacity: 0.85;
 
 }
+
 ::placeholder {
   font-family: 'Montserrat';
 }
+
 .results {
   display: flex;
   flex-direction: column;
@@ -160,6 +182,7 @@ img {
   margin: 10px auto 10px auto;
 
 }
+
 body {
   margin-bottom: 200px;
   height: auto;
@@ -180,6 +203,12 @@ body {
     border-radius: 2px;
     width: 200px;
     opacity: .8;
+  }
+  .aboutMeLink {
+    align-self: flex-end;
+    color: white;
+    font-size: 1rem;
+    margin: 0px auto;
   }
   .siteName {
     font-family: "Montserrat";
@@ -244,6 +273,12 @@ a:after {
     border-radius: 2px;
     width: 200px;
     opacity: .8;
+  }
+  .aboutMeLink {
+    align-self: flex-end;
+    color: white;
+    font-size: 1rem;
+    margin: 0px auto;
   }
   .results {
     display: flex;
