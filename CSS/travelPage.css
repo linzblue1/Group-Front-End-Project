@@ -113,12 +113,11 @@ img {
   padding: 13px;
   font-size: 3rem;
 }
+
 .aboutMeLink {
-  align-self: flex-end;
-  color: white;
-  font-size: 1.4rem;
-  margin: 0px auto;
+  align-self: center !important;
 }
+
 .dropdownContainer {
   display: flex;
   flex-direction: column;
