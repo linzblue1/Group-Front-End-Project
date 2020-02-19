@@ -14,7 +14,37 @@ html {
 .mainDropdownTitle {
   font-size: 3rem;
 }
+h1 {
+  text-align: left;
+  padding-top: 10px;
+  margin-left: 30px;
+  font-weight: bold;
 
+
+}
+/* h2 {
+  text-align: left;
+  margin-left:30px;
+  padding: 5px;
+  font-weight: bold;
+} */
+
+p {
+  text-align: left;
+  margin-left:30px;
+  padding: .5px;
+  font-size: large;
+}
+
+li {
+font-weight: bold;
+}
+h2 {
+  margin-left: 23%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
 a {
   color: black;
   font-size: 1rem;
@@ -39,6 +69,25 @@ select::-ms-expand {
   overflow: hidden;
 }
 
+.fit-picture1 {
+  margin-left: 25%;
+  
+}
+.fit-picture2 {
+  margin-left: 25%;
+}
+.fit-picture3 {
+  margin-left: 25%;
+}
+h3{
+  margin: 30px;
+  font-weight: bold;
+}
+h5 {
+  margin-left: 25%;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
 
 li {
   list-style-type: none;
@@ -79,7 +128,7 @@ form{
 }
 img {
   max-width: 100%;
-  height: auto;
+  height: auto%;
   object-fit: fill;
 }
 

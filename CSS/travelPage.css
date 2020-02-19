@@ -52,6 +52,9 @@ select::-ms-expand {
 .button:focus {
   background-color: #f46A4E
 }
+h3 {
+  font-weight: bold;
+}
 
 
 li {
