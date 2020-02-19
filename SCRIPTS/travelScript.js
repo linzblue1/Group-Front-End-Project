@@ -159,7 +159,7 @@ userSubmit.addEventListener("click", (e) => {
 //opens the about me page in a new window.
 aboutUsLink.addEventListener("click", (e) => {
     e.preventDefault();
-    window.open("https://www.lpiv.co");
+    window.open("./about/index.html");
 });
 
 // Jquery to kept events hidden till search button is clicked
