@@ -1,10 +1,8 @@
-
-
 html {
   font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-  .userLocationClass {
+.userLocationClass {
   display: flex;
   margin: 5px;
   border-radius: 2px;
@@ -21,6 +19,7 @@ a {
   font-size: 1rem;
   font-family: "Montserrat";
 }
+
 .menu.nested {
   margin-right: 0;
   margin-left: 0rem;
@@ -29,6 +28,7 @@ a {
 a:hover {
   color: #f46A4E;
 }
+
 a:focus {
   color: #f46A4E
 }
@@ -53,6 +53,7 @@ select::-ms-expand {
 .button:hover {
   background-color: #f46A4E;
 }
+
 .button:focus {
   background-color: #f46A4E
 }
@@ -113,7 +114,7 @@ img {
   text-align: center;
   justify-items: center;
   color: black;
-  font-family: 'Montserrat', Verdana,Tahoma, sans-serif;
+  font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
   padding: 13px;
   font-size: 3rem;
 }
@@ -200,6 +201,7 @@ body {
     font-size: 4rem;
     color: white;
   }
+
   body {
     margin-bottom: 300px;
   }
@@ -220,15 +222,18 @@ body {
     width: 200px;
     opacity: .8;
   }
+
   .dropDownMenuTitle {
     font-size: 2rem;
   }
+
   .aboutMeLink {
     align-self: flex-end;
     color: white;
     font-size: 1rem;
     margin: 0px auto;
   }
+
   .siteName {
     font-family: "Montserrat";
     align-self: center;
@@ -236,6 +241,7 @@ body {
     font-size: 4rem;
     color: white;
   }
+
   .weatherBox {
     display: flex;
     text-align: center;
@@ -247,8 +253,9 @@ body {
     font-family: 'Montserrat';
     width: 100%;
     height: auto;
-  
+
   }
+
   .dropdownContainer {
     display: flex;
     flex-direction: column;
@@ -257,6 +264,7 @@ body {
     flex-wrap: wrap;
     margin: auto;
   }
+
   .results {
     display: flex;
     flex-direction: column;
@@ -267,22 +275,27 @@ body {
     width: 100%;
     height: fit-content;
     margin: 10px auto;
-  
+
   }
 }
+
 .weatherBoxClass {
   width: 70%;
   height: auto;
   margin: 0px auto 50px auto;
 }
+
 #hidden {
   display: none;
 }
 
 
 a:after {
-  content: none!important;
-};
+  content: none !important;
+}
+
+;
+
 @media only screen and (max-width: 850px) {
   .userLocationClass {
     display: flex;
@@ -291,12 +304,14 @@ a:after {
     width: 200px;
     opacity: .8;
   }
+
   .aboutMeLink {
     align-self: flex-end;
     color: white;
     font-size: 1rem;
     margin: 0px auto;
   }
+
   .results {
     display: flex;
     flex-direction: column;
@@ -307,8 +322,9 @@ a:after {
     width: 100%;
     height: fit-content;
     margin: 10px auto;
-  
+
   }
+
   .weatherBox {
     display: flex;
     text-align: center;
@@ -320,13 +336,15 @@ a:after {
     font-family: 'Montserrat';
     width: 100%;
     max-height: auto;
-  
+
   }
+
   .weatherBoxClass {
     width: 70%;
     height: auto;
     margin: 0px auto 50px auto;
   }
+
   .dropdownContainer {
     display: flex;
     flex-direction: column;
@@ -335,6 +353,7 @@ a:after {
     flex-wrap: wrap;
     margin: auto;
   }
+
   .siteName {
     font-family: "Montserrat";
     align-self: center;
