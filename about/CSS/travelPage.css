@@ -1,80 +1,105 @@
+
+
 html {
   font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.userLocationClass {
+  .userLocationClass {
   display: flex;
   margin: 5px;
   border-radius: 2px;
   width: 520px;
   opacity: .8;
 }
-
 .mainDropdownTitle {
   font-size: 3rem;
 }
+h1 {
+  text-align: left;
+  padding-top: 10px;
+  margin-left: 30px;
+  font-weight: bold;
 
+
+}
+/* h2 {
+  text-align: left;
+  margin-left:30px;
+  padding: 5px;
+  font-weight: bold;
+} */
+
+p {
+  text-align: left;
+  margin-left:30px;
+  padding: .5px;
+  font-size: large;
+}
+
+li {
+font-weight: bold;
+}
+h2 {
+  margin-left: 23%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
 a {
   color: black;
   font-size: 1rem;
   font-family: "Montserrat";
 }
-
-.menu.nested {
-  margin-right: 0;
-  margin-left: 0rem;
-}
-
 a:hover {
-  color: #f46A4E;
+  color: #98CEAC;
 }
-
-a:focus {
-  color: #f46A4E
-}
-
 span {
   font-size: 3.5rem;
-  color: #f46A4E;
-}
+  color: #98CEAC;
 
+}
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-
 select::-ms-expand {
   display: none;
   appearance: none;
   overflow: hidden;
 }
 
-.button:hover {
-  background-color: #f46A4E;
+.fit-picture1 {
+  margin-left: 25%;
+  
 }
-
-.button:focus {
-  background-color: #f46A4E
+.fit-picture2 {
+  margin-left: 25%;
 }
-h3 {
+.fit-picture3 {
+  margin-left: 25%;
+}
+h3{
+  margin: 30px;
   font-weight: bold;
 }
-
+h5 {
+  margin-left: 25%;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
 
 li {
   list-style-type: none;
   position: relative;
 }
-
 .formContainer {
   display: flex;
   padding: 1px;
   flex-basis: auto;
   align-content: center;
 }
-
-form {
+form{
   display: flex;
   align-self: center;
   padding: 5px;
@@ -92,17 +117,18 @@ form {
   justify-content: center;
   width: 70%;
   margin: 60px auto 10px auto;
+  /* background: url(../IMG/cityShot.jpg); */
   background: url(../IMG/cityShot2.jpg);
   height: 80vh;
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
   opacity: .9;
-}
 
+}
 img {
   max-width: 100%;
-  height: auto;
+  height: auto%;
   object-fit: fill;
 }
 
@@ -110,22 +136,20 @@ img {
   color: white;
   text-decoration: none;
 }
-
+/* ul {
+  position: absolute;
+  z-index: 1000;
+} */
 .dropDownMenuTitle {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  /* position: absolute; */
   justify-items: center;
   color: black;
-  font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
   padding: 13px;
   font-size: 3rem;
 }
-
-.aboutUsLink {
-  align-self: center !important;
-}
-
 .dropdownContainer {
   display: flex;
   flex-direction: column;
@@ -135,7 +159,6 @@ img {
   margin: auto;
   justify-content: space-evenly;
 }
-
 .weatherBox {
   display: flex;
   text-align: center;
@@ -150,17 +173,15 @@ img {
   margin: auto;
 
 }
-
 .button {
   display: flex;
   border-radius: 2px;
   align-self: baseline;
   height: 39px;
-  background-color: #f06553;
+  background-color: #98CEAC;
+  /* background-color: #b2e4f3; */
   font-family: 'Montserrat';
-  opacity: 0.85;
 }
-
 .siteName {
   font-family: "Montserrat";
   align-self: baseline;
@@ -168,14 +189,11 @@ img {
   padding-left: 250px;
   font-size: 5rem;
   color: white;
-  opacity: 0.85;
 
 }
-
 ::placeholder {
   font-family: 'Montserrat';
 }
-
 .results {
   display: flex;
   flex-direction: column;
@@ -188,36 +206,20 @@ img {
   margin: 10px auto 10px auto;
 
 }
-
 body {
   margin-bottom: 200px;
   height: auto;
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #edfff6), color-stop(0.87, #b2e4f3)); */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.19, #DAE2F8), color-stop(0.87, #D6A4A4));
 
 }
 
-@media only screen and (min-width: 1650px) {
-  .siteName {
-    font-family: "Montserrat";
-    align-self: center;
-    padding-left: 0px;
-    font-size: 4rem;
-    color: white;
-  }
-
-  body {
-    margin-bottom: 300px;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .dropDownMenuTitle {
-    font-size: 2rem;
-  }
-}
 
 
-@media only screen and (max-width: 800px) {
+
+
+
+@media only screen and (max-width: 600px) {
   .userLocationClass {
     display: flex;
     margin: 5px;
@@ -225,18 +227,6 @@ body {
     width: 200px;
     opacity: .8;
   }
-
-  .dropDownMenuTitle {
-    font-size: 2rem;
-  }
-
-  .aboutMeLink {
-    align-self: flex-end;
-    color: white;
-    font-size: 1rem;
-    margin: 0px auto;
-  }
-
   .siteName {
     font-family: "Montserrat";
     align-self: center;
@@ -244,7 +234,6 @@ body {
     font-size: 4rem;
     color: white;
   }
-
   .weatherBox {
     display: flex;
     text-align: center;
@@ -256,9 +245,9 @@ body {
     font-family: 'Montserrat';
     width: 100%;
     height: auto;
-
+    /* margin: 0px auto 0px auto; */
+  
   }
-
   .dropdownContainer {
     display: flex;
     flex-direction: column;
@@ -266,8 +255,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin: auto;
+    /* justify-content: space-between; */
   }
-
   .results {
     display: flex;
     flex-direction: column;
@@ -278,27 +267,22 @@ body {
     width: 100%;
     height: fit-content;
     margin: 10px auto;
-
+  
   }
 }
-
 .weatherBoxClass {
   width: 70%;
   height: auto;
   margin: 0px auto 50px auto;
 }
-
 #hidden {
   display: none;
 }
 
 
 a:after {
-  content: none !important;
-}
-
-;
-
+  content: none!important;
+};
 @media only screen and (max-width: 850px) {
   .userLocationClass {
     display: flex;
@@ -307,14 +291,6 @@ a:after {
     width: 200px;
     opacity: .8;
   }
-
-  .aboutMeLink {
-    align-self: flex-end;
-    color: white;
-    font-size: 1rem;
-    margin: 0px auto;
-  }
-
   .results {
     display: flex;
     flex-direction: column;
@@ -325,9 +301,8 @@ a:after {
     width: 100%;
     height: fit-content;
     margin: 10px auto;
-
+  
   }
-
   .weatherBox {
     display: flex;
     text-align: center;
@@ -339,15 +314,14 @@ a:after {
     font-family: 'Montserrat';
     width: 100%;
     max-height: auto;
-
+    /* margin: 0px auto 50px auto; */
+  
   }
-
   .weatherBoxClass {
     width: 70%;
     height: auto;
     margin: 0px auto 50px auto;
   }
-
   .dropdownContainer {
     display: flex;
     flex-direction: column;
@@ -355,8 +329,8 @@ a:after {
     align-items: center;
     flex-wrap: wrap;
     margin: auto;
+    /* justify-content: space-between; */
   }
-
   .siteName {
     font-family: "Montserrat";
     align-self: center;
