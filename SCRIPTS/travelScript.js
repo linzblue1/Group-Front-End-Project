@@ -1,5 +1,4 @@
-
-"use strict"//; import "isomorphic-fetch";
+"use strict" //; import "isomorphic-fetch";
 
 const userLocation = document.getElementById("userLocation");
 
@@ -35,7 +34,7 @@ const culturePrint = (name) => {
     let cultureListItem = document.createElement("li");
     cultureListItem.innerHTML = name;
     cultureSection.appendChild(cultureListItem);
-    
+
 }
 
 //This function is passed the weather fetch data and creates elements. The text elements are paragraphs
@@ -58,7 +57,7 @@ const createWeatherBox = (data) => {
     currentWeatherParagraph.innerHTML += `Wind: ${data.current.wind_mph} MPH<br>`
     currentWeatherParagraph.innerHTML += `Humidity: ${data.current.humidity}%`
     weatherBox.appendChild(currentWeatherParagraph);
-    
+
 }
 
 //This function creates a title over the section. perhaps defunct now but i'm leaving it in just in case...
@@ -73,25 +72,25 @@ const sectionTitle = (id) => {
 //This could use some refactoring but it works for now...
 const fetchCultureLink = (culturalPlace) => {
     fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&titles=${culturalPlace}&prop=info&inprop=url|talkid`)
-    .then(response => response.json())
-    .then(data => {
-        let firstEntry = () => {
-            for (var a in data.query.pages) return a;
-        }
+        .then(response => response.json())
+        .then(data => {
+            let firstEntry = () => {
+                for (var a in data.query.pages) return a;
+            }
 
-        let zero = firstEntry();
-        const cultureSection = document.getElementById("cultureList");
-        let cultureListItem = document.createElement("li");
-        let cultureLink = document.createElement("a");
-        cultureListItem.setAttribute("class", "cultureItemClass")
-        const cultureLinkText = document.createTextNode(`${culturalPlace}`);
-        cultureLink.appendChild(cultureLinkText);
-        cultureLink.href = data.query.pages[`${zero}`].fullurl;
-        cultureLink.target = "_blank";
-        cultureListItem.appendChild(cultureLink);
-        cultureSection.appendChild(cultureListItem);
+            let zero = firstEntry();
+            const cultureSection = document.getElementById("cultureList");
+            let cultureListItem = document.createElement("li");
+            let cultureLink = document.createElement("a");
+            cultureListItem.setAttribute("class", "cultureItemClass")
+            const cultureLinkText = document.createTextNode(`${culturalPlace}`);
+            cultureLink.appendChild(cultureLinkText);
+            cultureLink.href = data.query.pages[`${zero}`].fullurl;
+            cultureLink.target = "_blank";
+            cultureListItem.appendChild(cultureLink);
+            cultureSection.appendChild(cultureListItem);
 
-    })
+        })
 }
 
 //this function creates a list of cultural items based on the categories selected ( we could add more or less).
@@ -99,17 +98,17 @@ const fetchCultureLink = (culturalPlace) => {
 
 const fetchCulture = () => {
     fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4deefb944765f83613cdba6e,4bf58dd8d48988d181941735,4bf58dd8d48988d165941735,4bf58dd8d48988d1f2931735,52e81612bcbc57f1066b7a22,52e81612bcbc57f1066b7a21,&radius=50000&client_id=UHSURV0TYLWFUWARGODQIIPUA40RB5GOYPYWL0NAUV43NKNN&client_secret=L1NWKEN3PN2KFWWCRP0BHXS0CEO1QW4W21SZIYREVA4CY5JE&near=${userLocation.value}&v=20200313`)
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        data.response.groups[0].items.map(item => {
-        fetchCultureLink(`${item.venue.name}`);
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            data.response.groups[0].items.map(item => {
+                fetchCultureLink(`${item.venue.name}`);
+
+            })
 
         })
-        
-    })
-    .catch( err => console.log(err));
+        .catch(err => console.log(err));
 }
 
 
@@ -119,24 +118,24 @@ const fetchEvent = (eventType) => {
     //We need to add another argument either here or the event handler that takes the date info as well. baby steps. 
     fetch(`https://api.eventful.com/json/events/search?q=${eventType}&c=${eventType}&t=today&l=
     ${userLocation.value}&within=25&sort_direction=descending&sort_order=popularity&page_size=20&app_key=QfJVpR8FLcNsHKLG`)
-    .then(response => {
-          return response.json();
-      })
-    .then(data => {
-        data.events.event.map(item => createEventParagraph(item, `${eventType}`));
-      })
-      .catch(err => console.error(err));
-        
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            data.events.event.map(item => createEventParagraph(item, `${eventType}`));
+        })
+        .catch(err => console.error(err));
+
 }
 const fetchWeather = () => {
     fetch(`http://api.weatherapi.com/v1/current.json?key=95929b78acb549bd9bc151519201302&q=${userLocation.value}`)
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        createWeatherBox(data);
-    })
-    .catch(err => console.log(err));
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            createWeatherBox(data);
+        })
+        .catch(err => console.log(err));
 }
 //below is the event listener. I called the fetchEvent function a few times with various events as arguments.
 //the argument it takes goes to the end of the URL inside the fetch function.
@@ -164,27 +163,27 @@ aboutUsLink.addEventListener("click", (e) => {
 });
 
 // Jquery to kept events hidden till search button is clicked
-$("#userSubmit").one("click", function() {
+$("#userSubmit").one("click", function () {
     $("#hidden").toggle();
 });
 
 // Jquery to replace the Weatherbox..etc w/ the new search option
-$("#userSubmit").click(function (){
+$("#userSubmit").click(function () {
     $("div.weatherBoxClass").replaceWith();
 });
 
-$("#userSubmit").click(function (){
+$("#userSubmit").click(function () {
     $("li.listItemClass").replaceWith();
 });
 
-$("#userSubmit").click(function (){
+$("#userSubmit").click(function () {
     $("li.cultureItemClass").replaceWith();
-    
+
 });
 
 $('#userSubmit').on('click', e => {
     let target = $(".mainDropdownTitle");
-    if( target.length ) {
+    if (target.length) {
         e.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top
@@ -194,7 +193,7 @@ $('#userSubmit').on('click', e => {
 //creates a scolling animation frmo the results to the first item.
 $('.mainDropdownTitle').on('click', e => {
     let target = $("#music");
-    if( target.length ) {
+    if (target.length) {
         e.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top
@@ -202,11 +201,11 @@ $('.mainDropdownTitle').on('click', e => {
     }
 });
 
-$('#userSubmit').on('click', function(event) {
+$('#userSubmit').on('click', function (event) {
 
     var target = $('.mainDropdownTitle');
 
-    if( target.length ) {
+    if (target.length) {
         event.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top
@@ -215,11 +214,11 @@ $('#userSubmit').on('click', function(event) {
 
 });
 
-$('.mainDropdownTitle').on('click', function(event) {
+$('.mainDropdownTitle').on('click', function (event) {
 
     var target = $('#music');
 
-    if( target.length ) {
+    if (target.length) {
         event.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top
