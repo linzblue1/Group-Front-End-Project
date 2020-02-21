@@ -190,7 +190,7 @@ $('#userSubmit').on('click', e => {
         }, 1500);
     }
 });
-//creates a scolling animation frmo the results to the first item.
+//creates a scolling animation from the results to the first item.
 $('.mainDropdownTitle').on('click', e => {
     let target = $("#music");
     if (target.length) {
@@ -201,28 +201,3 @@ $('.mainDropdownTitle').on('click', e => {
     }
 });
 
-$('#userSubmit').on('click', function (event) {
-
-    var target = $('.mainDropdownTitle');
-
-    if (target.length) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1500);
-    }
-
-});
-
-$('.mainDropdownTitle').on('click', function (event) {
-
-    var target = $('#music');
-
-    if (target.length) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1500);
-    }
-
-});
