@@ -13,7 +13,15 @@ This project is Paxton, Fred and Lockett.
 # APIs used:
 
 eventful for events.
+
+
 mediawiki for taking cultural sites and creating a link to wikipedia.
+
+
 foursquare for cultural sites nearby.
+
+
 weatherapi for local weather.
+
+
 
