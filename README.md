@@ -15,6 +15,8 @@ meant for people who are travelling with only a day in a certain city or those w
 
 # APIs used:
 
+CORS Unblock Chrome extension necessary to run. Otherwise CORS connectivity issues will prevent the events from fetching.
+
 eventful for events.
 
 
