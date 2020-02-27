@@ -14,7 +14,7 @@ Our concept for the site was a event aggregator that uses various APIs to give t
 meant for people who are travelling with only a day in a certain city or those who are just looking for something that may be happening in their own city. It provides the user with weather info, sports, music, comedy and film events that are happening in the area today as well as cultural or historic sites nearby and a link to theie respective wikipedia page.
 
 # APIs used:
-
+![landing page picture](./IMG/24go.png)
 CORS Unblock Chrome extension necessary to run. Otherwise CORS connectivity issues will prevent the events from fetching.
 
 eventful for events.
